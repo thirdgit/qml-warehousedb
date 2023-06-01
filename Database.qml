@@ -163,11 +163,15 @@ QtObject {
         let orders = []
         root._database().transaction((tx) => {
             let result = tx.executeSql("select
-                    `o`.`order_id`, `o`.`order_time`,
-                    `o`.`order_amount`, `o`.`client_id`,
+                    `o`.`order_id`,
+                    datetime(`o`.`order_time`, 'localtime') as `order_time`,
+                    `o`.`order_amount`,
+                    `o`.`client_id`,
                     `c`.`client_name`
-                from `orders` as `o` inner join `clients` as `c`
-                    on `c`.`client_id` = `o`.`client_id` order by `o`.`order_id` desc;")
+                from `orders` as `o`
+                inner join `clients` as `c`
+                    on `c`.`client_id` = `o`.`client_id`
+                order by `o`.`order_id` desc;")
             for (let i = 0; i < result.rows.length; i++) {
                 let row = result.rows.item(i)
                 orders.push({
@@ -227,7 +231,11 @@ QtObject {
     function getSupplies() {
         let supplies = []
         root._database().transaction((tx) => {
-            let result = tx.executeSql("select * from `supplies` order by `supply_id` desc;")
+            let result = tx.executeSql("select
+                    `supply_id`,
+                    datetime(`supply_time`, 'localtime') as `supply_time`,
+                    `supply_amount`
+                from `supplies` order by `supply_id` desc;")
             for (let i = 0; i < result.rows.length; i++) {
                 let row = result.rows.item(i)
                 supplies.push({
