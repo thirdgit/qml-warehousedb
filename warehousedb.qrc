@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>qmldir</file>
+        <file>main.qml</file>
+        <file>HomePage.qml</file>
+        <file>Database.qml</file>
+        <file>Models.qml</file>
+        <file>NavBar.qml</file>
+        <file>images/add.png</file>
+        <file>images/back.png</file>
+        <file>images/delete.png</file>
+        <file>images/forward.png</file>
+        <file>images/save.png</file>
+        <file>images/icon-clients.png</file>
+        <file>images/icon-materials.png</file>
+        <file>images/icon-orders.png</file>
+        <file>images/icon-supplies.png</file>
+        <file>images/icon-add-order.png</file>
+        <file>images/icon-add-supply.png</file>
+        <file>pages/qmldir</file>
+        <file>pages/AddOrderPage.qml</file>
+        <file>pages/MaterialsPage.qml</file>
+        <file>pages/OrdersPage.qml</file>
+        <file>pages/ClientsPage.qml</file>
+        <file>pages/OrderDetailsPage.qml</file>
+        <file>pages/AddClientPopup.qml</file>
+        <file>pages/AddMaterialPopup.qml</file>
+        <file>pages/EditClientPopup.qml</file>
+        <file>pages/EditMaterialPopup.qml</file>
+        <file>pages/AddOrderItemPopup.qml</file>
+        <file>pages/SuppliesPage.qml</file>
+        <file>pages/SupplyDetailsPage.qml</file>
+        <file>pages/AddSupplyPage.qml</file>
+        <file>pages/AddSupplyItemPopup.qml</file>
+    </qresource>
+</RCC>
